@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arduino Uno</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .pageContentLayer{
+            padding-top: 20px;
+            padding-bottom: 20px;
+
+            position: relative;
+            width: 75vw;
+            margin: auto;
+            text-align: center;
+            background-color:white;
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr auto auto;
+            grid-column-gap: 10px;
+            grid-row-gap: 20px;
+            
+            
+        }
+        img{
+            grid-area: 1 / 1 / 2 / 2;
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        .shortInfo_action-bar{
+            grid-area: 1 / 2 / 2 / 3;
+            background-color:rgb(244,244,244);
+            
+        }
+        .functional_features{
+            grid-area: 2 / 1 / 3 / 3;
+            
+        }
+        .technical_features{
+            grid-area: 3 / 1 / 4 / 3;
+        }
+        div.odd, div.even{
+            display: block;
+
+            background-color: rgb(244,244,244);
+            border-style: solid;
+            border-left-width: 6px;
+
+            margin: 20px;
+            margin-left: 0;
+            padding: 10px;
+
+            text-align: left;
+            
+            
+
+        }
+        div.even{
+            border-left-color: green;
+        }
+        div.odd{
+            border-left-color: blue;
+        }
+        span.highlight{
+            color: rgb(63,186,251);
+            font-weight: bold;
+        }
+        div.odd.cardBtnsArea{
+        
+            height: 50px;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            
+        }
+        button.counter{
+            background-color:rgb(244,244,244);
+            border-style: solid;
+            border-width: 1px;
+            border-color: blue;
+        }
+        button.decrease_btn{
+            grid-area: 1 / 1 / 2 / 2;
+
+        }
+        button.displayAmount_btn{
+            grid-area: 1 / 2 / 2 / 3;
+
+            border-left-width: 0;
+            border-right-width: 0;
+            
+        }
+        button.increase_btn{
+            grid-area: 1 / 3 / 2 / 4;
+        }
+        button.addToCard_btn{
+            grid-area: 1 / 5 / 2 / 9;
+            background-color: green;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        }
+        button.addToList{
+            color: green;
+            font-size: large;
+            font-weight: bold;
+            background-color: rgb(244,244,244);
+        }
+        button.addToList:hover, button.decrease_btn:hover, button.increase_btn:hover, button.addToCard_btn {
+            cursor: pointer;
+        }
+        button.addToCard_btn:hover{
+            background-color: rgb(63,186,251);
+        }
+
+        .functional_features{
+            text-align: left;
+            
+        }
+        ul{
+            margin-top: 15px;
+            padding-left: 15px;
+            list-style-position: inside;
+            text-align: left;
+        }
+        h3.sub{
+            color: rgb(2,84,159);
+            text-align: left;
+        }
+        li span{
+            position: relative;
+            left: -8px;
+        }
+        hr{
+            display:block;
+            width: 100%;               
+            background-color:rgb(160,160,160);
+            height: 1px;
+
+        }
+        table{
+            width: 100%;
+            margin-top: 15px;
+            border-collapse: collapse;
+        }
+        td{
+            text-align: left;
+            padding: 8px;
+        }
+        th, td{
+            border: 1px solid rgb(235, 235, 235);
+        }
+        tr:nth-child(odd){
+            background-color: #f9f9f9
+        }
+        tr:nth-child(even){
+            background-color: white;
+        }
+        tr:hover{
+            background-color: rgb(144,144,144);
+            color: white;
+        }
+        tr:nth-child(1){
+            font-weight: bold;
+        }
+        .price{
+            font-size: 25px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <div class="pageContentLayer">
+
+        <img src="D:\4_1-Güz-22_23\Client-Side Web Technologies\Projeler\Project-1\Project1-Images\arduino.jpg" alt="">
+        
+        <div class="shortInfo_action-bar">
+            <h3>Orijinal Arduino Uno Mini - Limited Edition</h3>
+            <div class="odd">Marka/Menşei: <span class="highlight">Arduino</span></div>
+            <div class="even">Stok Kodu : 20530</div>
+            <div class="odd">765,66 TL + KDV</div>
+            <div class="even price"><span class="highlight">903,48 TL KDV Dahil</span></div>
+
+            <div class="odd cardBtnsArea">
+                <button class="counter decrease_btn">-</button>
+                <button class="counter displayAmount_btn">1</button>
+                <button class="counter increase_btn">+</button>
+
+                <button class="addToCard_btn">Sepete Ekle</button>
+
+            </div>   
+
+            <div class="even">
+                <button class="addToList">* Alışveriş Listeme Ekle</button>
+            </div>
+        </div>
+
+        <div class="functional_features">
+            <h3 class="sub">Orijinal Arduino Uno Mini Özellikleri</h3>
+            <hr>
+            <ul>
+                <li><span>6 adet PWM çıkışı sağlayan 14 dijital I/O pini</span></li>
+                <li><span>6 analog giriş pini</span></li>
+                <li><span>16MHz seramik rezonatör</span></li>
+                <li><span>USB-C bağlantı noktası</span></li>
+                <li><span>USB veya harici bir güç kaynağı ile çalışır</span></li>
+                <li><span>Yeniden başlatma tuşu</span></li>
+                <li><span>Anahtar bileşenler</span></li>
+                <li><span>Mikroçip Teknolojisi ATmega328 MCU</span></li>
+                <li><span>USB Denetleyicili Mikroçip Teknolojisi ATmega16U2 MCU</span></li>
+            </ul>
+        </div>
+
+        <div class="technical_features">
+            <h3 class="sub">Teknik Özellikleri</h3>
+            <hr>
+            <table>
+                <tr>
+                    <td>Üretici Firma</td>
+                    <td>Arduino</td>
+                </tr>
+                <tr>
+                    <td>SRAM</td>
+                    <td>2KB</td>
+                </tr>
+                <tr>
+                    <td>Ürün Boyutları	</td>
+                    <td>10.9 x 9.09 x 5 cm</td>
+                </tr>
+                <tr>
+                    <td>Ürün Ağırlığı</td>
+                    <td>73.6g</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    
+
+
+</body>
+</html>

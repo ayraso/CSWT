@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            
+        }
+
+        .loginDiv{
+
+            margin: auto;
+      
+
+            
+            background-color: rgb(224, 224, 224);
+            width: 400px;
+            height: 350px;
+
+            border-radius: 5px;
+            box-shadow: 
+                4px 4px 4px 0px rgba(140, 140, 140); 
+
+
+        }
+        p{
+            margin-block-start: 0em;
+            margin-block-end: 0em;
+
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+        }
+        .btn_socialMediaLog{
+            
+            display: inline-block;
+            
+            width: 40px;
+            height: 40px;
+
+            background-color: white;
+            text-align: center;
+            border-radius: 50% ;
+            border-width: 2px;
+            border-color: blue;
+            border-style: solid;
+
+            margin: 3px;
+            font-size: 20px;
+            color: blue;
+        }
+        .gmail{
+            border-color: red;
+            color: red;
+        }
+        .input{
+            display: block;
+            border-radius: 5px;
+            border-width: 0px;
+
+            height: 40px;
+            width: 360px;
+            padding: 0%;
+            margin: auto;
+
+            padding-left: 10px;
+            padding-right: 10px;
+
+            
+        }
+        .btn_submit{
+            display: block;
+            border-radius: 5px;
+            text-align: center;
+            font-size: 20px;
+            background-color: rgb(173,255,47);
+            
+            height: 40px;
+            width: 360px;
+            margin: auto;
+
+            margin-bottom: 10px;
+            
+            font-size: 20px;
+            
+            padding: 0;
+
+        }
+        .btn_submit:hover, .btn_socialMediaLog:hover{
+            background-color: rgb(0,128,0);
+            color: white;
+            cursor: pointer;
+        }
+        .btn_socialMediaLog:hover{
+            border-color: white;
+        }
+        form{
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            
+        }
+        .outher_SMLogs{
+            width:100%;
+            text-align: center;
+
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="loginDiv">
+        <p>Login</p>
+
+        <div class="outher_SMLogs">
+            <button class="btn_socialMediaLog gmail">G</button>
+            <button class="btn_socialMediaLog facebook">f</button>
+            <button class="btn_socialMediaLog linkedn">in</button>
+        </div>
+
+        <form action="">
+            <input class="input", type="email", placeholder="Your email">
+            <br>
+            <input class="input", type="password", placeholder="Password">
+        </form>
+        <button class="btn_submit">Submit</button>
+    </div>
+</body>
+</html>
+
+ <!-- 
+        box-shadow: 
+        horizontal offset: positive means the shadow will be on the right of the box, 
+                            a negative offset will put the shadow on the left of the box
+        vertical offset  : a negative one means the box-shadow will be above the box, 
+                            a positive one means the shadow will be below the box
+        blur radius      : if set to 0 the shadow will be sharp, 
+                            the higher the number, the more blurred it will be
+        spread radius    : positive values increase the size of the shadow, negative values decrease the size. 
+                            Default is 0 (the shadow is same size as blur)
+        color            :
+
+        x, y, color
+        x, y, blur-radius, spread-radius, color
+
+
+    -->
+    <!--
+        button:
+        text-align: yalnızca yatayda hizalama içindir.
+        dikeyde hizalama butonlar için sabittir. flexbox kullanmak lazım.
+        
+    -->
+    
+    <!--
+        Compared to "display: inline", the major difference is that 
+        "display: inline-block" allows to set a width and height on the element.
+
+        Also, with "display: inline-block", the top and bottom margins/paddings are respected, 
+        but with "display: inline" they are not.
+
+        Compared to "display: block", the major difference is that 
+        "display: inline-block" does not add a line-break after the element, so the element can sit next to other elements.
+    -->
+
+    <!--
+        gmail login butonunu btn_socaialMediaLog:hover altında border:white yapamadım.
+        linkedn ve facebook'a uyguluyor ancak gmail'e uygulamıyor.
+    -->
+
+    <!--
+        box-sizing: border-box
+        atanan didth, height değerlerinin padding ve border dahil kapsanmasını sağlar.
+    -->
